@@ -9,7 +9,6 @@
 			\newcommand{xbar}{\overline{x}}
 			\newcommand{phat}{\hat{p}}
 		</macros>
-		<param name="numbering.projects.level" select="0" />
 	</docinfo>
 
 <article>
