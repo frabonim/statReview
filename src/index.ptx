@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+
+
+	<docinfo>
+		<!-- Macros here including ones that compile tikz graphics-->
+		<macros>
+			\newcommand{xbar}{\overline{x}}
+			\newcommand{phat}{\hat{p}}
+		</macros>
+		<param name="numbering.projects.level" select="0" />
+	</docinfo>
+
+<article>
+	<title>Elementary Statistics Review</title>
+    <xi:include href="frontmatter.ptx" />
+	<xi:include href="BasicTerminology.ptx" />
+	<xi:include href="ConfidenceIntervals.ptx" />
+	<xi:include href="HypTesting.ptx" />
+	<xi:include href="HypTesting2.ptx" />
+</article>
+</mathbook>

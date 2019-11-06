@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-11-05T19:59:39-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Confidence Intervals</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{xbar}{\overline{x}}
+\newcommand{phat}{\hat{p}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="article-1.html"><span class="title">Elementary Statistics Review</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_basicterms.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="article-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_hyptest.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_basicterms.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="article-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_hyptest.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></li>
+<li class="link">
+<a href="sec_basicterms.html" data-scroll="sec_basicterms"><span class="title">Basic Terminology</span></a><ul>
+<li><a href="sec_basicterms.html#subsection-1" data-scroll="subsection-1">Population and Parameters</a></li>
+<li><a href="sec_basicterms.html#subsection-2" data-scroll="subsection-2">Samples and statistics</a></li>
+<li><a href="sec_basicterms.html#subsection-3" data-scroll="subsection-3">Next... Confidence intervals and hypothesis tests</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="sec_confints.html" data-scroll="sec_confints"><span class="title">Confidence Intervals</span></a><ul>
+<li><a href="sec_confints.html#subsection-4" data-scroll="subsection-4">General Form of (Most) Confidence Intervals</a></li>
+<li><a href="sec_confints.html#subsection-5" data-scroll="subsection-5">\((1-\alpha)100\%\) \(t\)-interval for the population mean</a></li>
+<li><a href="sec_confints.html#subsection-6" data-scroll="subsection-6">How is the t-multiplier determined?</a></li>
+<li><a href="sec_confints.html#subsection-7" data-scroll="subsection-7">Using Software</a></li>
+<li><a href="sec_confints.html#subsection-8" data-scroll="subsection-8">Factors Affecting the Width of the t-interval for the Mean \(\mu\)</a></li>
+<li><a href="sec_confints.html#subsection-9" data-scroll="subsection-9">In Closing</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sec_hyptest.html" data-scroll="sec_hyptest"><span class="title">Hypothesis Testing</span></a><ul>
+<li><a href="sec_hyptest.html#subsection-10" data-scroll="subsection-10">Errors in Hypothesis Testing</a></li>
+<li><a href="sec_hyptest.html#subsection-11" data-scroll="subsection-11">Making the Decision</a></li>
+<li><a href="sec_hyptest.html#subsection-12" data-scroll="subsection-12">In Practice</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sec_hyptestprocedure.html" data-scroll="sec_hyptestprocedure"><span class="title">Hypothesis Testing Procedure</span></a><ul><li><a href="sec_hyptestprocedure.html#subsection-13" data-scroll="subsection-13">Mean GPA</a></li></ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_confints"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber"></span> <span class="title">Confidence Intervals</span>
+</h2>
+<a href="sec_confints.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><p id="p-16">Let's review the basic concept of a confidence interval.</p>
+<p id="p-17">Suppose we want to estimate an actual population mean \(\mu\text{.}\) As you know, we can only obtain \(\xbar\text{,}\) the mean of a sample randomly selected from the population of interest. We can use our sample to find a range of values:</p>
+<div class="displaymath">
+\begin{gather*}
+\text{Lower value} &lt; \text{population mean } \mu &lt; \text{Upper value}
+\end{gather*}
+</div>
+<p>that we can be really confident contains the population mean \(\mu\text{.}\) The range of values is called a <dfn class="terminology">confidence interval</dfn>.</p>
+<article class="example-like" id="example-3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3</span>.</h6>
+<p id="p-18">Should using a hand-held cell phone while driving be illegal?</p>
+<p id="p-19">There is little doubt that over the years you have seen numerous confidence intervals for population proportions reported in newspapers.</p>
+<p id="p-20">For example, a newspaper report (ABC News poll, May 16-20, 2001) was concerned whether or not U.S. adults thought using a hand-held cell phone while driving should be illegal. Of the 1,027 U.S. adults randomly selected for participation in the poll, 69% thought that it should be illegal. The reporter claimed that the poll's <dfn class="terminology">margin of error</dfn> was 3%. Therefore, the confidence interval for the (unknown) population proportion \(p\) is 69% ± 3%. That is, we can be really confident that between 66% and 72% of all U.S. adults think using a hand-held cell phone while driving a car should be illegal.</p></article></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">General Form of (Most) Confidence Intervals</span>
+</h3>
+<p id="p-21">The previous example illustrates the general form of most confidence intervals, namely:</p>
+<div class="displaymath">
+\begin{gather*}
+\text{Sample estimate } \pm \text{ margin of error}
+\end{gather*}
+</div>
+<p id="p-22">The lower limit is obtained by:</p>
+<div class="displaymath">
+\begin{gather*}
+L = \text{estimate } - \text{ margin of error}
+\end{gather*}
+</div>
+<p>The upper limit is obtained by:</p>
+<div class="displaymath">
+\begin{gather*}
+U = \text{estimate } + \text{ margin of error}
+\end{gather*}
+</div>
+<p id="p-23">Once we've obtained the interval, we can claim that we are really confident that the value of the population parameter is somewhere between the value of \(L\) and the value of \(U\text{.}\)</p>
+<p id="p-24">So far, we've been very general in our discussion of the calculation and interpretation of confidence intervals. To be more specific about their use, let's consider a specific interval, namely the <dfn class="terminology">\(t\)-interval for a population mean \(\mu\)</dfn>.</p></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">\((1-\alpha)100\%\) \(t\)-interval for the population mean</span>
+</h3>
+<p id="p-25">If we are interested in estimating a population mean \(\mu\text{,}\) it is very likely that we would use the \(t\)-interval for a population mean \(\mu\text{.}\)</p>
+<article class="definition-like" id="definition-1"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">4</span>. <span class="title">\(t\)-Interval for a Population Mean.</span>
+</h6>
+<p id="p-26">The formula for the confidence interval in words is:</p>
+<div class="displaymath">
+\begin{gather*}
+\text{Sample mean} \pm (\text{t-multiplier} \times \text{standard error})
+\end{gather*}
+</div>
+<p>and you might recall that the formula for the confidence interval more precisely is:</p>
+<div class="displaymath">
+\begin{gather*}
+\bar{x}\pm t_{\alpha/2, n-1}\left(\dfrac{s}{\sqrt{n}}\right)
+\end{gather*}
+</div></article><p id="p-27">Note that:</p>
+<ul class="disc">
+<li id="li-15">the <dfn class="terminology">\(t\)-multiplier</dfn>, which we denote as \(t_{\alpha/2, n-1}\text{,}\) depends on the sample size through \(n\) - 1 (called the <dfn class="terminology">degrees of freedom</dfn>) and the confidence level \((1-\alpha)\times 100\%\) through \(\frac{\alpha}{2}\text{.}\)</li>
+<li id="li-16">the <dfn class="terminology">standard error</dfn>, which is \(\frac{s}{\sqrt{n}}\text{,}\) quantifies how much the sample means \(\xbar\) vary from sample to sample. That is, the standard error is just another name for the estimated standard deviation of all the possible sample means.</li>
+<li id="li-17">the quantity to the right of the \(\pm\) sign, the <dfn class="terminology">\(t\)-multiplier \(\times\) standard error</dfn>, is just a more specific form of the margin of error. That is, the margin of error in estimating a population mean <em class="emphasis">µ</em> is calculated by multiplying the <em class="emphasis">t</em>-multiplier by the standard error of the sample mean.</li>
+<li id="li-18">the formula is only appropriate if a certain assumption is met, namely that the data are normally distributed.</li>
+</ul>
+<p id="p-28">Clearly, the sample mean \(\xbar\text{,}\) the sample standard deviation \(s\text{,}\) and the sample size \(n\) are all readily obtained from the sample data. Now, we just need to review how to obtain the value of the \(t\)-multiplier, and we'll be all set.</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">How is the t-multiplier determined?</span>
+</h3>
+<p id="p-29">As the following graph illustrates, we put the confidence level \(1-\alpha\) in the center of the <em class="emphasis">t</em>-distribution. Then, since the entire probability represented by the curve must equal 1, a probability of \(\alpha\) must be shared equally among the two "tails" of the distribution. That is, the probability of the left tail is \(\frac{\alpha}{2}\) and the probability of the right tail is \(\frac{\alpha}{2}\text{.}\) If we add up the probabilities of the various parts \((\frac{\alpha}{2} + 1-\alpha + \frac{\alpha}{2})\text{,}\) we get 1. The \(t\)-multiplier, denoted \(t_{\alpha/2}\text{,}\) is the \(t\)-value such that the probability "to the right of it" is \(\frac{\alpha}{2}\text{:}\)</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/statprogtdist.png" style="width: 100%; height: auto;" alt="Graph of the t-distribution with left and right tails shaded."></div></div>
+<div class="sbsrow" style="margin-left:10%;margin-right:10%;"><figcaption class="sbscaption" style="width:100%;"><span class="type">Figure</span> <span class="codenumber">5.</span> The \(t\)-distribution</figcaption></div>
+</div>
+<p id="p-30">It should be no surprise that we want to be as confident as possible when we estimate a population parameter. This is why confidence levels are typically very high. The most common confidence levels are 90%, 95% and 99%. The following table contains a summary of the values of \(\frac{\alpha}{2}\) corresponding to these common confidence levels. (Note that the <dfn class="terminology">confidence coefficient</dfn> is merely the confidence level reported as a proportion rather than as a percentage.)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">Confidence</td>
+<td class="c m b0 r0 l0 t0 lines">Confidence</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">Coefficient \((1-\alpha)\)</td>
+<td class="c m b1 r0 l0 t0 lines">Level</td>
+<td class="c m b1 r0 l0 t0 lines">\(\left(1-\alpha/2\right)\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(\alpha/2\)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">0.90</td>
+<td class="c m b0 r0 l0 t0 lines">90%</td>
+<td class="c m b0 r0 l0 t0 lines">0.95</td>
+<td class="c m b0 r0 l0 t0 lines">0.05</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">0.95</td>
+<td class="c m b0 r0 l0 t0 lines">95%</td>
+<td class="c m b0 r0 l0 t0 lines">0.975</td>
+<td class="c m b0 r0 l0 t0 lines">0.025</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">0.99</td>
+<td class="c m b0 r0 l0 t0 lines">99%</td>
+<td class="c m b0 r0 l0 t0 lines">0.995</td>
+<td class="c m b0 r0 l0 t0 lines">0.005</td>
+</tr>
+</table></div></div></div></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Using Software</span>
+</h3>
+<p id="p-31">The good news is that statistical software, <a class="external" href="https://www.r-project.org/about.html" target="_blank">such as R</a>, will calculate most confidence intervals for us.</p>
+<p id="p-32">Let's take an example of researchers who are interested in the average heart rate of male college students. Assume a random sample of 130 male college students were taken for the study.</p>
+<p id="p-33">The following is the R output of a one-sample <em class="emphasis">t</em>-test for the population mean. Note this output includes a 95% confidence interval.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><pre class="code-block tex2jax_ignore">One Sample t-test
+
+data:  Heartrates
+t = 18.857, df = 129, p-value &lt; 2.2e-16
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ 72.536 74.987
+sample estimates:
+mean of x 
+ 73.762
+</pre></div></div></div>
+<p id="p-34">In this example, the researchers were interested in estimating \(\mu\text{,}\) the heart rate. The output indicates that the mean for the sample of \(n\) = 130 male students equals 73.762. The 95% confidence interval for the population mean \(\mu\) is (72.536, 74.987). We can be 95% confident that the mean heart rate of all male college students is between 72.536 and 74.987 beats per minute.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Factors Affecting the Width of the t-interval for the Mean \(\mu\)</span>
+</h3>
+<p id="p-35">Think about the width of the interval in the previous example. In general, do you think we desire narrow confidence intervals or wide confidence intervals? If you are not sure, consider the following two intervals:</p>
+<ul class="disc">
+<li id="li-19">We are 95% confident that the average GPA of all college students is between 1.0 and 4.0.</li>
+<li id="li-20">We are 95% confident that the average GPA of all college students is between 2.7 and 2.9.</li>
+</ul>
+<p id="p-36">Which of these two intervals is more informative? Of course, the narrower one gives us a better idea of the magnitude of the true unknown average GPA. In general, the narrower the confidence interval, the more information we have about the value of the population parameter. Therefore, we want all of our confidence intervals to be as narrow as possible. So, let's investigate what factors affect the width of the <em class="emphasis">t</em>-interval for the mean \(\mu\text{.}\)</p>
+<p id="p-37">Of course, to find the width of the confidence interval, we just take the difference in the two limits:</p>
+<div class="displaymath">
+\begin{gather*}
+\text{Width } = \text{ Upper Limit - Lower Limit}
+\end{gather*}
+</div>
+<p>What factors affect the width of the confidence interval? We can examine this question by using the formula for the confidence interval and seeing what would happen should one of the elements of the formula be allowed to vary.</p>
+<div class="displaymath">
+\begin{gather*}
+\xbar\pm t_{\alpha/2, n-1}\left(\dfrac{s}{\sqrt{n}}\right)
+\end{gather*}
+</div>
+<p>What is the width of the \(t\)-interval for the mean? If you subtract the lower limit from the upper limit, you get:</p>
+<div class="displaymath">
+\begin{gather*}
+\text{Width }=2 \times t_{\alpha/2, n-1}\left(\dfrac{s}{\sqrt{n}}\right)
+\end{gather*}
+</div>
+<p>Now, let's investigate the factors that affect the length of this interval. Convince yourself that each of the following statements is accurate:</p>
+<ul class="disc">
+<li id="li-21">As the sample mean increases, the length stays the same. That is, the sample mean plays no role in the width of the interval.</li>
+<li id="li-22">As the sample standard deviation <em class="emphasis">s</em> decreases, the width of the interval decreases. Since <em class="emphasis">s</em> is an estimate of how much the data vary naturally, we have little control over <em class="emphasis">s</em> other than making sure that we make our measurements as carefully as possible.</li>
+<li id="li-23">As we decrease the confidence level, the <em class="emphasis">t</em>-multiplier decreases, and hence the width of the interval decreases. In practice, we wouldn't want to set the confidence level below 90%.</li>
+<li id="li-24">As we increase the sample size, the width of the interval decreases. This is the factor that we have the most flexibility in changing, the only limitation being our time and financial constraints.</li>
+</ul></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">In Closing</span>
+</h3>
+<p id="p-38">In our review of confidence intervals, we have focused on just one type of confidence interval. The important thing to recognize is that the topics discussed here — the general form of intervals, determination of \(t\)-multipliers, and factors affecting the width of an interval — generally extend to all of the confidence intervals we will encounter in this course.</p></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>
