@@ -19,18 +19,18 @@ window.MathJax = {
     tags: "none",
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
   startup: {
@@ -40,23 +40,144 @@ window.MathJax = {
       rsMathReady();
       }
     )}
-},
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-article ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{xbar}{\overline{x}}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="article-1.html"><span class="title">Elementary Statistics Review</span></a></h1>
+<p class="byline"></p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec_basicterms.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="article-1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec_hyptest.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{xbar}{\overline{x}}
 \newcommand{phat}{\hat{p}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -64,136 +185,138 @@ window.MathJax = {
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="article-1.html"><span class="title">Elementary Statistics Review</span></a></h1>
-<p class="byline"></p>
-</div>
-<div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div>
-<div id="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
-</h2>
-<div id="searchempty"><span>No results.</span></div>
-<ol id="searchresults"></ol>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_basicterms.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="article-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_hyptest.html" title="Next">Next</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_basicterms.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="article-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_hyptest.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="front.html" data-scroll="front" class="internal"><span class="title">Front Matter</span></a></li>
-<li class="link">
-<a href="sec_basicterms.html" data-scroll="sec_basicterms" class="internal"><span class="codenumber">1</span> <span class="title">Basic Terminology</span></a><ul>
-<li><a href="sec_basicterms.html#subsection-1" data-scroll="subsection-1" class="internal">Population and Parameters</a></li>
-<li><a href="sec_basicterms.html#subsection-2" data-scroll="subsection-2" class="internal">Samples and statistics</a></li>
-<li><a href="sec_basicterms.html#subsection-3" data-scroll="subsection-3" class="internal">Next... Confidence intervals and hypothesis tests</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="front.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec_basicterms.html" class="internal"><span class="codenumber">1</span> <span class="title">Basic Terminology</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_basicterms.html#subsection-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Population and Parameters</span></a></div></li>
+<li><div class="toc-item"><a href="sec_basicterms.html#subsection-2" class="internal"><span class="codenumber">1.2</span> <span class="title">Samples and statistics</span></a></div></li>
+<li><div class="toc-item"><a href="sec_basicterms.html#subsection-3" class="internal"><span class="codenumber">1.3</span> <span class="title">Next... Confidence intervals and hypothesis tests</span></a></div></li>
 </ul>
 </li>
-<li class="link active">
-<a href="sec_confints.html" data-scroll="sec_confints" class="internal"><span class="codenumber">2</span> <span class="title">Confidence Intervals</span></a><ul>
-<li><a href="sec_confints.html#subsection-4" data-scroll="subsection-4" class="internal">General Form of (Most) Confidence Intervals</a></li>
-<li><a href="sec_confints.html#subsection-5" data-scroll="subsection-5" class="internal"><span class="process-math">\((1-\alpha)100\%\)</span> <span class="process-math">\(t\)</span>-interval for the population mean</a></li>
-<li><a href="sec_confints.html#subsection-6" data-scroll="subsection-6" class="internal">How is the t-multiplier determined?</a></li>
-<li><a href="sec_confints.html#subsection-7" data-scroll="subsection-7" class="internal">Using Software</a></li>
-<li><a href="sec_confints.html#subsection-8" data-scroll="subsection-8" class="internal">Factors Affecting the Width of the t-interval for the Mean <span class="process-math">\(\mu\)</span></a></li>
-<li><a href="sec_confints.html#subsection-9" data-scroll="subsection-9" class="internal">Supplemental Materials</a></li>
-<li><a href="sec_confints.html#subsection-10" data-scroll="subsection-10" class="internal">In Closing</a></li>
+<li class="active">
+<div class="toc-item"><a href="sec_confints.html" class="internal"><span class="codenumber">2</span> <span class="title">Confidence Intervals</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_confints.html#subsection-4" class="internal"><span class="codenumber">2.1</span> <span class="title">General Form of (Most) Confidence Intervals</span></a></div></li>
+<li><div class="toc-item"><a href="sec_confints.html#subsection-5" class="internal"><span class="codenumber">2.2</span> <span class="title"><span class="process-math">\((1-\alpha)100\%\)</span> <span class="process-math">\(t\)</span>-interval for the population mean</span></a></div></li>
+<li><div class="toc-item"><a href="sec_confints.html#subsection-6" class="internal"><span class="codenumber">2.3</span> <span class="title">How is the t-multiplier determined?</span></a></div></li>
+<li><div class="toc-item"><a href="sec_confints.html#subsection-7" class="internal"><span class="codenumber">2.4</span> <span class="title">Using Software</span></a></div></li>
+<li><div class="toc-item"><a href="sec_confints.html#subsection-8" class="internal"><span class="codenumber">2.5</span> <span class="title">Factors Affecting the Width of the t-interval for the Mean <span class="process-math">\(\mu\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec_confints.html#subsection-9" class="internal"><span class="codenumber">2.6</span> <span class="title">Supplemental Materials</span></a></div></li>
+<li><div class="toc-item"><a href="sec_confints.html#subsection-10" class="internal"><span class="codenumber">2.7</span> <span class="title">In Closing</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="sec_hyptest.html" data-scroll="sec_hyptest" class="internal"><span class="codenumber">3</span> <span class="title">Hypothesis Testing</span></a><ul>
-<li><a href="sec_hyptest.html#subsection-11" data-scroll="subsection-11" class="internal">Errors in Hypothesis Testing</a></li>
-<li><a href="sec_hyptest.html#subsection-12" data-scroll="subsection-12" class="internal">Making the Decision</a></li>
-<li><a href="sec_hyptest.html#subsection-13" data-scroll="subsection-13" class="internal">In Practice</a></li>
-<li><a href="sec_hyptest.html#subsection-14" data-scroll="subsection-14" class="internal">Supplemental Materials</a></li>
+<li>
+<div class="toc-item"><a href="sec_hyptest.html" class="internal"><span class="codenumber">3</span> <span class="title">Hypothesis Testing</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_hyptest.html#subsection-11" class="internal"><span class="codenumber">3.1</span> <span class="title">Errors in Hypothesis Testing</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hyptest.html#subsection-12" class="internal"><span class="codenumber">3.2</span> <span class="title">Making the Decision</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hyptest.html#subsection-13" class="internal"><span class="codenumber">3.3</span> <span class="title">In Practice</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hyptest.html#subsection-14" class="internal"><span class="codenumber">3.4</span> <span class="title">Supplemental Materials</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="sec_hyptestprocedure.html" data-scroll="sec_hyptestprocedure" class="internal"><span class="codenumber">4</span> <span class="title">Hypothesis Testing Procedure</span></a><ul>
-<li><a href="sec_hyptestprocedure.html#subsection-15" data-scroll="subsection-15" class="internal">Mean GPA</a></li>
-<li><a href="sec_hyptestprocedure.html#subsection-16" data-scroll="subsection-16" class="internal">Supplemental Materials</a></li>
+<li>
+<div class="toc-item"><a href="sec_hyptestprocedure.html" class="internal"><span class="codenumber">4</span> <span class="title">Hypothesis Testing Procedure</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec_hyptestprocedure.html#subsection-15" class="internal"><span class="codenumber">4.1</span> <span class="title">Mean GPA</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_hyptestprocedure.html#subsubsection-1" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Right Tailed</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hyptestprocedure.html#subsubsection-2" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Left Tailed</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hyptestprocedure.html#subsubsection-3" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Two Tailed</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="sec_hyptestexamples.html" data-scroll="sec_hyptestexamples" class="internal"><span class="codenumber">5</span> <span class="title">Hypothesis Testing Examples</span></a><ul>
-<li><a href="sec_hyptestexamples.html#subsection-17" data-scroll="subsection-17" class="internal">Right-Tailed Test</a></li>
-<li><a href="sec_hyptestexamples.html#subsection-18" data-scroll="subsection-18" class="internal">Left-Tailed Test</a></li>
+<li><div class="toc-item"><a href="sec_hyptestprocedure.html#subsection-16" class="internal"><span class="codenumber">4.2</span> <span class="title">Supplemental Materials</span></a></div></li>
 </ul>
 </li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content">
+<li>
+<div class="toc-item"><a href="sec_hyptestexamples.html" class="internal"><span class="codenumber">5</span> <span class="title">Hypothesis Testing Examples</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_hyptestexamples.html#subsection-17" class="internal"><span class="codenumber">5.1</span> <span class="title">Right-Tailed Test</span></a></div></li>
+<li><div class="toc-item"><a href="sec_hyptestexamples.html#subsection-18" class="internal"><span class="codenumber">5.2</span> <span class="title">Left-Tailed Test</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="sec_confints"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2</span> <span class="title">Confidence Intervals</span>
 </h2>
-<section class="introduction" id="introduction-1"><p id="p-16">Let's review the basic concept of a confidence interval.</p> <p id="p-17">Suppose we want to estimate an actual population mean <span class="process-math">\(\mu\text{.}\)</span> As you know, we can only obtain <span class="process-math">\(\xbar\text{,}\)</span> the mean of a sample randomly selected from the population of interest. We can use our sample to find a range of values:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
+<section class="introduction" id="introduction-1"><div class="para" id="p-16">Let's review the basic concept of a confidence interval.</div> <div class="para logical" id="p-17">
+<div class="para">Suppose we want to estimate an actual population mean <span class="process-math">\(\mu\text{.}\)</span> As you know, we can only obtain <span class="process-math">\(\xbar\text{,}\)</span> the mean of a sample randomly selected from the population of interest. We can use our sample to find a range of values:</div>
+<div class="displaymath process-math" id="md-1">
 \begin{gather*}
 \text{Lower value} &lt; \text{population mean } \mu &lt; \text{Upper value}
 \end{gather*}
 </div>
-<p class="continuation">that we can be really confident contains the population mean <span class="process-math">\(\mu\text{.}\)</span> The range of values is called a <dfn class="terminology">confidence interval</dfn>.</p> <article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h3 class="heading">
+<div class="para">that we can be really confident contains the population mean <span class="process-math">\(\mu\text{.}\)</span> The range of values is called a <dfn class="terminology">confidence interval</dfn>.</div>
+</div> <article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.0.1</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-18">Should using a hand-held cell phone while driving be illegal?</p> <p id="p-19">There is little doubt that over the years you have seen numerous confidence intervals for population proportions reported in newspapers.</p> <p id="p-20">For example, a newspaper report (ABC News poll, May 16-20, 2001) was concerned whether or not U.S. adults thought using a hand-held cell phone while driving should be illegal. Of the 1,027 U.S. adults randomly selected for participation in the poll, 69% thought that it should be illegal. The reporter claimed that the poll's <dfn class="terminology">margin of error</dfn> was 3%. Therefore, the confidence interval for the (unknown) population proportion <span class="process-math">\(p\)</span> is 69% ± 3%. That is, we can be really confident that between 66% and 72% of all U.S. adults think using a hand-held cell phone while driving a car should be illegal.</p></article></div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><div class="para" id="p-18">Should using a hand-held cell phone while driving be illegal?</div> <div class="para" id="p-19">There is little doubt that over the years you have seen numerous confidence intervals for population proportions reported in newspapers.</div> <div class="para" id="p-20">For example, a newspaper report (ABC News poll, May 16-20, 2001) was concerned whether or not U.S. adults thought using a hand-held cell phone while driving should be illegal. Of the 1,027 U.S. adults randomly selected for participation in the poll, 69% thought that it should be illegal. The reporter claimed that the poll's <dfn class="terminology">margin of error</dfn> was 3%. Therefore, the confidence interval for the (unknown) population proportion <span class="process-math">\(p\)</span> is 69% ± 3%. That is, we can be really confident that between 66% and 72% of all U.S. adults think using a hand-held cell phone while driving a car should be illegal.</div></article></div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.1</span> <span class="title">General Form of (Most) Confidence Intervals</span>
 </h3>
-<p id="p-21">The previous example illustrates the general form of most confidence intervals, namely:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+<div class="para logical" id="p-21">
+<div class="para">The previous example illustrates the general form of most confidence intervals, namely:</div>
+<div class="displaymath process-math" id="md-2">
 \begin{gather*}
 \text{Sample estimate } \pm \text{ margin of error}
 \end{gather*}
 </div>
-<p id="p-22">The lower limit is obtained by:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+</div>
+<div class="para logical" id="p-22">
+<div class="para">The lower limit is obtained by:</div>
+<div class="displaymath process-math" id="md-3">
 \begin{gather*}
 L = \text{estimate } - \text{ margin of error}
 \end{gather*}
 </div>
-<p class="continuation">The upper limit is obtained by:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
+<div class="para">The upper limit is obtained by:</div>
+<div class="displaymath process-math" id="md-4">
 \begin{gather*}
 U = \text{estimate } + \text{ margin of error}
 \end{gather*}
 </div>
-<p id="p-23">Once we've obtained the interval, we can claim that we are really confident that the value of the population parameter is somewhere between the value of <span class="process-math">\(L\)</span> and the value of <span class="process-math">\(U\text{.}\)</span></p>
-<p id="p-24">So far, we've been very general in our discussion of the calculation and interpretation of confidence intervals. To be more specific about their use, let's consider a specific interval, namely the <dfn class="terminology"><span class="process-math">\(t\)</span>-interval for a population mean <span class="process-math">\(\mu\)</span></dfn>.</p></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+</div>
+<div class="para" id="p-23">Once we've obtained the interval, we can claim that we are really confident that the value of the population parameter is somewhere between the value of <span class="process-math">\(L\)</span> and the value of <span class="process-math">\(U\text{.}\)</span>
+</div>
+<div class="para" id="p-24">So far, we've been very general in our discussion of the calculation and interpretation of confidence intervals. To be more specific about their use, let's consider a specific interval, namely the <dfn class="terminology"><span class="process-math">\(t\)</span>-interval for a population mean <span class="process-math">\(\mu\)</span></dfn>.</div></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2</span> <span class="title"><span class="process-math">\((1-\alpha)100\%\)</span> <span class="process-math">\(t\)</span>-interval for the population mean</span>
 </h3>
-<p id="p-25">If we are interested in estimating a population mean <span class="process-math">\(\mu\text{,}\)</span> it is very likely that we would use the <span class="process-math">\(t\)</span>-interval for a population mean <span class="process-math">\(\mu\text{.}\)</span></p>
+<div class="para" id="p-25">If we are interested in estimating a population mean <span class="process-math">\(\mu\text{,}\)</span> it is very likely that we would use the <span class="process-math">\(t\)</span>-interval for a population mean <span class="process-math">\(\mu\text{.}\)</span>
+</div>
 <article class="definition definition-like" id="definition-1"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(t\)</span>-Interval for a Population Mean.</span>
-</h4> <p id="p-26">The formula for the confidence interval in words is:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+</h4> <div class="para logical" id="p-26">
+<div class="para">The formula for the confidence interval in words is:</div>
+<div class="displaymath process-math" id="md-5">
 \begin{gather*}
 \text{Sample mean} \pm (\text{t-multiplier} \times \text{standard error})
 \end{gather*}
 </div>
-<p class="continuation">and you might recall that the formula for the confidence interval more precisely is:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+<div class="para">and you might recall that the formula for the confidence interval more precisely is:</div>
+<div class="displaymath process-math" id="md-6">
 \begin{gather*}
 \bar{x}\pm t_{\alpha/2, n-1}\left(\dfrac{s}{\sqrt{n}}\right)
 \end{gather*}
-</div></article><p id="p-27">Note that:</p>
+</div>
+</div></article><div class="para logical" id="p-27">
+<div class="para">Note that:</div>
 <ul class="disc">
-<li id="li-15"><p id="p-derived-li-15">the <dfn class="terminology"><span class="process-math">\(t\)</span>-multiplier</dfn>, which we denote as <span class="process-math">\(t_{\alpha/2, n-1}\text{,}\)</span> depends on the sample size through <span class="process-math">\(n\)</span> - 1 (called the <dfn class="terminology">degrees of freedom</dfn>) and the confidence level <span class="process-math">\((1-\alpha)\times 100\%\)</span> through <span class="process-math">\(\frac{\alpha}{2}\text{.}\)</span></p></li>
-<li id="li-16"><p id="p-derived-li-16">the <dfn class="terminology">standard error</dfn>, which is <span class="process-math">\(\frac{s}{\sqrt{n}}\text{,}\)</span> quantifies how much the sample means <span class="process-math">\(\xbar\)</span> vary from sample to sample. That is, the standard error is just another name for the estimated standard deviation of all the possible sample means.</p></li>
-<li id="li-17"><p id="p-derived-li-17">the quantity to the right of the <span class="process-math">\(\pm\)</span> sign, the <dfn class="terminology"><span class="process-math">\(t\)</span>-multiplier <span class="process-math">\(\times\)</span> standard error</dfn>, is just a more specific form of the margin of error. That is, the margin of error in estimating a population mean <em class="emphasis">µ</em> is calculated by multiplying the <em class="emphasis">t</em>-multiplier by the standard error of the sample mean.</p></li>
-<li id="li-18"><p id="p-derived-li-18">the formula is only appropriate if a certain assumption is met, namely that the data are normally distributed.</p></li>
+<li id="li-15"><div class="para" id="p-derived-li-15">the <dfn class="terminology"><span class="process-math">\(t\)</span>-multiplier</dfn>, which we denote as <span class="process-math">\(t_{\alpha/2, n-1}\text{,}\)</span> depends on the sample size through <span class="process-math">\(n\)</span> - 1 (called the <dfn class="terminology">degrees of freedom</dfn>) and the confidence level <span class="process-math">\((1-\alpha)\times 100\%\)</span> through <span class="process-math">\(\frac{\alpha}{2}\text{.}\)</span>
+</div></li>
+<li id="li-16"><div class="para" id="p-derived-li-16">the <dfn class="terminology">standard error</dfn>, which is <span class="process-math">\(\frac{s}{\sqrt{n}}\text{,}\)</span> quantifies how much the sample means <span class="process-math">\(\xbar\)</span> vary from sample to sample. That is, the standard error is just another name for the estimated standard deviation of all the possible sample means.</div></li>
+<li id="li-17"><div class="para" id="p-derived-li-17">the quantity to the right of the <span class="process-math">\(\pm\)</span> sign, the <dfn class="terminology"><span class="process-math">\(t\)</span>-multiplier <span class="process-math">\(\times\)</span> standard error</dfn>, is just a more specific form of the margin of error. That is, the margin of error in estimating a population mean <em class="emphasis">µ</em> is calculated by multiplying the <em class="emphasis">t</em>-multiplier by the standard error of the sample mean.</div></li>
+<li id="li-18"><div class="para" id="p-derived-li-18">the formula is only appropriate if a certain assumption is met, namely that the data are normally distributed.</div></li>
 </ul>
-<p id="p-28">Clearly, the sample mean <span class="process-math">\(\xbar\text{,}\)</span> the sample standard deviation <span class="process-math">\(s\text{,}\)</span> and the sample size <span class="process-math">\(n\)</span> are all readily obtained from the sample data. Now, we just need to review how to obtain the value of the <span class="process-math">\(t\)</span>-multiplier, and we'll be all set.</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+</div>
+<div class="para" id="p-28">Clearly, the sample mean <span class="process-math">\(\xbar\text{,}\)</span> the sample standard deviation <span class="process-math">\(s\text{,}\)</span> and the sample size <span class="process-math">\(n\)</span> are all readily obtained from the sample data. Now, we just need to review how to obtain the value of the <span class="process-math">\(t\)</span>-multiplier, and we'll be all set.</div></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3</span> <span class="title">How is the t-multiplier determined?</span>
 </h3>
-<p id="p-29">As the following graph illustrates, we put the confidence level <span class="process-math">\(1-\alpha\)</span> in the center of the <em class="emphasis">t</em>-distribution. Then, since the entire probability represented by the curve must equal 1, a probability of <span class="process-math">\(\alpha\)</span> must be shared equally among the two "tails" of the distribution. That is, the probability of the left tail is <span class="process-math">\(\frac{\alpha}{2}\)</span> and the probability of the right tail is <span class="process-math">\(\frac{\alpha}{2}\text{.}\)</span> If we add up the probabilities of the various parts <span class="process-math">\((\frac{\alpha}{2} + 1-\alpha + \frac{\alpha}{2})\text{,}\)</span> we get 1. The <span class="process-math">\(t\)</span>-multiplier, denoted <span class="process-math">\(t_{\alpha/2}\text{,}\)</span> is the <span class="process-math">\(t\)</span>-value such that the probability "to the right of it" is <span class="process-math">\(\frac{\alpha}{2}\text{:}\)</span></p>
+<div class="para" id="p-29">As the following graph illustrates, we put the confidence level <span class="process-math">\(1-\alpha\)</span> in the center of the <em class="emphasis">t</em>-distribution. Then, since the entire probability represented by the curve must equal 1, a probability of <span class="process-math">\(\alpha\)</span> must be shared equally among the two "tails" of the distribution. That is, the probability of the left tail is <span class="process-math">\(\frac{\alpha}{2}\)</span> and the probability of the right tail is <span class="process-math">\(\frac{\alpha}{2}\text{.}\)</span> If we add up the probabilities of the various parts <span class="process-math">\((\frac{\alpha}{2} + 1-\alpha + \frac{\alpha}{2})\text{,}\)</span> we get 1. The <span class="process-math">\(t\)</span>-multiplier, denoted <span class="process-math">\(t_{\alpha/2}\text{,}\)</span> is the <span class="process-math">\(t\)</span>-value such that the probability "to the right of it" is <span class="process-math">\(\frac{\alpha}{2}\text{:}\)</span>
+</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><figure class="figure figure-like" id="figure-1"><img src="external/images/statprogtdist.png" class="contained" alt="Graph of the t-distribution with left and right tails shaded."><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3.1<span class="period">.</span></span><span class="space"> </span>The <span class="process-math">\(t\)</span>-distribution</figcaption></figure></div></div></div>
-<p id="p-30">It should be no surprise that we want to be as confident as possible when we estimate a population parameter. This is why confidence levels are typically very high. The most common confidence levels are 90%, 95% and 99%. The following table contains a summary of the values of <span class="process-math">\(\frac{\alpha}{2}\)</span> corresponding to these common confidence levels. (Note that the <dfn class="terminology">confidence coefficient</dfn> is merely the confidence level reported as a proportion rather than as a percentage.)</p>
+<div class="para" id="p-30">It should be no surprise that we want to be as confident as possible when we estimate a population parameter. This is why confidence levels are typically very high. The most common confidence levels are 90%, 95% and 99%. The following table contains a summary of the values of <span class="process-math">\(\frac{\alpha}{2}\)</span> corresponding to these common confidence levels. (Note that the <dfn class="terminology">confidence coefficient</dfn> is merely the confidence level reported as a proportion rather than as a percentage.)</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr>
 <td class="c m b0 r0 l0 t0 lines">Confidence</td>
@@ -229,9 +352,9 @@ U = \text{estimate } + \text{ margin of error}
 </table></div></div></div></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.4</span> <span class="title">Using Software</span>
 </h3>
-<p id="p-31">The good news is that statistical software, <a class="external" href="https://www.r-project.org/about.html" target="_blank">such as R</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a>, will calculate most confidence intervals for us.</p>
-<p id="p-32">Let's take an example of researchers who are interested in the average heart rate of male college students. Assume a random sample of 130 male college students were taken for the study.</p>
-<p id="p-33">The following is the R output of a one-sample <em class="emphasis">t</em>-test for the population mean. Note this output includes a 95% confidence interval.</p>
+<div class="para" id="p-31">The good news is that statistical software, <a class="external" href="https://www.r-project.org/about.html" target="_blank">such as R</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a>, will calculate most confidence intervals for us.</div>
+<div class="para" id="p-32">Let's take an example of researchers who are interested in the average heart rate of male college students. Assume a random sample of 130 male college students were taken for the study.</div>
+<div class="para" id="p-33">The following is the R output of a one-sample <em class="emphasis">t</em>-test for the population mean. Note this output includes a 95% confidence interval.</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><pre class="code-block tex2jax_ignore">One Sample t-test
 
 data:  Heartrates
@@ -243,49 +366,65 @@ sample estimates:
 mean of x 
  73.762
 </pre></div></div></div>
-<p id="p-34">In this example, the researchers were interested in estimating <span class="process-math">\(\mu\text{,}\)</span> the heart rate. The output indicates that the mean for the sample of <span class="process-math">\(n\)</span> = 130 male students equals 73.762. The 95% confidence interval for the population mean <span class="process-math">\(\mu\)</span> is (72.536, 74.987). We can be 95% confident that the mean heart rate of all male college students is between 72.536 and 74.987 beats per minute.</p></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<div class="para" id="p-34">In this example, the researchers were interested in estimating <span class="process-math">\(\mu\text{,}\)</span> the heart rate. The output indicates that the mean for the sample of <span class="process-math">\(n\)</span> = 130 male students equals 73.762. The 95% confidence interval for the population mean <span class="process-math">\(\mu\)</span> is (72.536, 74.987). We can be 95% confident that the mean heart rate of all male college students is between 72.536 and 74.987 beats per minute.</div></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.5</span> <span class="title">Factors Affecting the Width of the t-interval for the Mean <span class="process-math">\(\mu\)</span></span>
 </h3>
-<p id="p-35">Think about the width of the interval in the previous example. In general, do you think we desire narrow confidence intervals or wide confidence intervals? If you are not sure, consider the following two intervals:</p>
+<div class="para logical" id="p-35">
+<div class="para">Think about the width of the interval in the previous example. In general, do you think we desire narrow confidence intervals or wide confidence intervals? If you are not sure, consider the following two intervals:</div>
 <ul class="disc">
-<li id="li-19"><p id="p-derived-li-19">We are 95% confident that the average GPA of all college students is between 1.0 and 4.0.</p></li>
-<li id="li-20"><p id="p-derived-li-20">We are 95% confident that the average GPA of all college students is between 2.7 and 2.9.</p></li>
+<li id="li-19"><div class="para" id="p-derived-li-19">We are 95% confident that the average GPA of all college students is between 1.0 and 4.0.</div></li>
+<li id="li-20"><div class="para" id="p-derived-li-20">We are 95% confident that the average GPA of all college students is between 2.7 and 2.9.</div></li>
 </ul>
-<p id="p-36">Which of these two intervals is more informative? Of course, the narrower one gives us a better idea of the magnitude of the true unknown average GPA. In general, the narrower the confidence interval, the more information we have about the value of the population parameter. Therefore, we want all of our confidence intervals to be as narrow as possible. So, let's investigate what factors affect the width of the <em class="emphasis">t</em>-interval for the mean <span class="process-math">\(\mu\text{.}\)</span></p>
-<p id="p-37">Of course, to find the width of the confidence interval, we just take the difference in the two limits:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+</div>
+<div class="para" id="p-36">Which of these two intervals is more informative? Of course, the narrower one gives us a better idea of the magnitude of the true unknown average GPA. In general, the narrower the confidence interval, the more information we have about the value of the population parameter. Therefore, we want all of our confidence intervals to be as narrow as possible. So, let's investigate what factors affect the width of the <em class="emphasis">t</em>-interval for the mean <span class="process-math">\(\mu\text{.}\)</span>
+</div>
+<div class="para logical" id="p-37">
+<div class="para">Of course, to find the width of the confidence interval, we just take the difference in the two limits:</div>
+<div class="displaymath process-math" id="md-7">
 \begin{gather*}
 \text{Width } = \text{ Upper Limit - Lower Limit}
 \end{gather*}
 </div>
-<p class="continuation">What factors affect the width of the confidence interval? We can examine this question by using the formula for the confidence interval and seeing what would happen should one of the elements of the formula be allowed to vary.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+<div class="para">What factors affect the width of the confidence interval? We can examine this question by using the formula for the confidence interval and seeing what would happen should one of the elements of the formula be allowed to vary.</div>
+<div class="displaymath process-math" id="md-8">
 \begin{gather*}
 \xbar\pm t_{\alpha/2, n-1}\left(\dfrac{s}{\sqrt{n}}\right)
 \end{gather*}
 </div>
-<p class="continuation">What is the width of the <span class="process-math">\(t\)</span>-interval for the mean? If you subtract the lower limit from the upper limit, you get:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+<div class="para">What is the width of the <span class="process-math">\(t\)</span>-interval for the mean? If you subtract the lower limit from the upper limit, you get:</div>
+<div class="displaymath process-math" id="md-9">
 \begin{gather*}
 \text{Width }=2 \times t_{\alpha/2, n-1}\left(\dfrac{s}{\sqrt{n}}\right)
 \end{gather*}
 </div>
-<p class="continuation">Now, let's investigate the factors that affect the length of this interval. Convince yourself that each of the following statements is accurate:</p>
+<div class="para">Now, let's investigate the factors that affect the length of this interval. Convince yourself that each of the following statements is accurate:</div>
 <ul class="disc">
-<li id="li-21"><p id="p-derived-li-21">As the sample mean increases, the length stays the same. That is, the sample mean plays no role in the width of the interval.</p></li>
-<li id="li-22"><p id="p-derived-li-22">As the sample standard deviation <em class="emphasis">s</em> decreases, the width of the interval decreases. Since <em class="emphasis">s</em> is an estimate of how much the data vary naturally, we have little control over <em class="emphasis">s</em> other than making sure that we make our measurements as carefully as possible.</p></li>
-<li id="li-23"><p id="p-derived-li-23">As we decrease the confidence level, the <em class="emphasis">t</em>-multiplier decreases, and hence the width of the interval decreases. In practice, we wouldn't want to set the confidence level below 90%.</p></li>
-<li id="li-24"><p id="p-derived-li-24">As we increase the sample size, the width of the interval decreases. This is the factor that we have the most flexibility in changing, the only limitation being our time and financial constraints.</p></li>
-</ul></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<li id="li-21"><div class="para" id="p-derived-li-21">As the sample mean increases, the length stays the same. That is, the sample mean plays no role in the width of the interval.</div></li>
+<li id="li-22"><div class="para" id="p-derived-li-22">As the sample standard deviation <em class="emphasis">s</em> decreases, the width of the interval decreases. Since <em class="emphasis">s</em> is an estimate of how much the data vary naturally, we have little control over <em class="emphasis">s</em> other than making sure that we make our measurements as carefully as possible.</div></li>
+<li id="li-23"><div class="para" id="p-derived-li-23">As we decrease the confidence level, the <em class="emphasis">t</em>-multiplier decreases, and hence the width of the interval decreases. In practice, we wouldn't want to set the confidence level below 90%.</div></li>
+<li id="li-24"><div class="para" id="p-derived-li-24">As we increase the sample size, the width of the interval decreases. This is the factor that we have the most flexibility in changing, the only limitation being our time and financial constraints.</div></li>
+</ul>
+</div></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.6</span> <span class="title">Supplemental Materials</span>
 </h3>
-<p id="p-38">For more practice thinking about confidence intervals watch the following video:</p>
-<ul class="disc"><li id="li-25"><p id="p-derived-li-25"><a class="external" href="http://www.learner.org/courses/againstallodds/unitpages/unit24.html" target="_blank">Confidence Intervals</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 1 </sup></a>, part of `against all odds' at Annenberg Learner.</p></li></ul></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<div class="para logical" id="p-38">
+<div class="para">For more practice thinking about confidence intervals watch the following video:</div>
+<ul class="disc"><li id="li-25"><div class="para" id="p-derived-li-25">
+<a class="external" href="http://www.learner.org/courses/againstallodds/unitpages/unit24.html" target="_blank">Confidence Intervals</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 1 </sup></a>, part of `against all odds' at Annenberg Learner.</div></li></ul>
+</div></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.7</span> <span class="title">In Closing</span>
 </h3>
-<p id="p-39">In our review of confidence intervals, we have focused on just one type of confidence interval. The important thing to recognize is that the topics discussed here — the general form of intervals, determination of <span class="process-math">\(t\)</span>-multipliers, and factors affecting the width of an interval — generally extend to all of the confidence intervals we will encounter in this course.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">www.r-project.org/about.html</code></div></div>
+<div class="para" id="p-39">In our review of confidence intervals, we have focused on just one type of confidence interval. The important thing to recognize is that the topics discussed here — the general form of intervals, determination of <span class="process-math">\(t\)</span>-multipliers, and factors affecting the width of an interval — generally extend to all of the confidence intervals we will encounter in this course.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">www.r-project.org/about.html</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">www.learner.org/courses/againstallodds/unitpages/unit24.html</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec_basicterms.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec_hyptest.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>
