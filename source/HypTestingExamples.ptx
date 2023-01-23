@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_hyptestexamples">
+<title>Hypothesis Testing Examples</title>
+
+
+<introduction>
+	<p>
+		In this section we share two more examples of hypothesis test procedures.
+	</p>
+</introduction>
+<subsection>
+	<title>Right-Tailed Test</title>
+	<p>
+		A biologist was interested in determining whether sunflower seedlings treated with an extract from Vinca minor roots resulted in a lower average height of sunflower seedlings than the standard height of 15.7 cm. The biologist treated a random sample of <m>n = 33</m> seedlings with the extract and subsequently obtained the following heights:
+	</p>
+	<table>
+		<title>Sunflower height data</title>
+	 <tabular>
+	    <row>
+	      <cell>
+	        11.5
+	      </cell>
+	      <cell>
+	        11.8
+	      </cell>
+	      <cell>
+	        15.7
+	      </cell>
+	      <cell>
+	        16.1
+	      </cell>
+	      <cell>
+	        14.1
+	      </cell>
+	      <cell>
+	        10.5
+	      </cell>
+	      <cell>
+	        9.3
+	      </cell>
+	      <cell>
+	        15.0
+	      </cell>
+	      <cell>
+	        11.1
+	      </cell>
+	    </row>
+	    <row>
+	      <cell>
+	        15.2
+	      </cell>
+	      <cell>
+	        19.0
+	      </cell>
+	      <cell>
+	        12.8
+	      </cell>
+	      <cell>
+	        12.4
+	      </cell>
+	      <cell>
+	        19.2
+	      </cell>
+	      <cell>
+	        13.5
+	      </cell>
+	      <cell>
+	        12.2
+	      </cell>
+	      <cell>
+	        13.3
+	      </cell>
+	      <cell>
+	      </cell>
+	    </row>
+	    <row>
+	      <cell>
+	        16.5
+	      </cell>
+	      <cell>
+	        13.5
+	      </cell>
+	      <cell>
+	        14.4
+	      </cell>
+	      <cell>
+	        16.7
+	      </cell>
+	      <cell>
+	        10.9
+	      </cell>
+	      <cell>
+	        13.0
+	      </cell>
+	      <cell>
+	        10.3
+	      </cell>
+	      <cell>
+	        15.8
+	      </cell>
+	      <cell>
+	      </cell>
+	    </row>
+	    <row>
+	      <cell>
+	        15.1
+	      </cell>
+	      <cell>
+	        17.1
+	      </cell>
+	      <cell>
+	        13.3
+	      </cell>
+	      <cell>
+	        12.4
+	      </cell>
+	      <cell>
+	        8.5
+	      </cell>
+	      <cell>
+	        14.3
+	      </cell>
+	      <cell>
+	        12.9
+	      </cell>
+	      <cell>
+	        13.5
+	      </cell>
+	      <cell>
+	      </cell>
+	    </row>
+	  </tabular>
+	</table>
+	<p>
+		The biologist's hypotheses are:
+		<md>
+			<mrow>H_0: \mu=15.7</mrow>
+			<mrow>H_a: \mu &lt; 15.7</mrow>
+		</md>
+		The biologist entered her data into R and ran the <c>t.test</c> function. She obtained the following output:
+	</p>
+	<sidebyside width="90%">
+		<pre>
+			One Sample t-test
+
+			data:  Heartrates
+			t = -4.60, df = 32, p-value &lt; 2.2e-16
+			alternative hypothesis: true mean is less than 15.7
+			sample estimates:
+			mean of x 
+			 13.664
+		</pre>
+	</sidebyside>
+	<p>
+		The output tells us that the average height of the <m>n = 33</m> sunflower seedlings was 13.664. The test statistic <m>t^*</m> is -4.60, and the <m>P</m>-value is less than <m>2.2\times 10^{-16}</m>.
+	</p>
+	<p>
+		If the biologist set her significance level, <m>\alpha</m> at 0.05, then she would see that the <m>P</m>-value is significantly less than <m>\alpha</m> and so she has strong evidence that the mean of all such sunflower seedlings is less than 15.7 cm.
+	</p>
+</subsection>
+
+<subsection>
+	<title>Left-Tailed Test</title>
+	<p>An engineer measured the Brinell hardness of 25 pieces of ductile iron that were subcritically annealed. The resulting data were:</p>
+	<table>
+		<title>Brinell hardness data</title>
+		<tabular>
+			<row>
+				<cell>
+					170
+				</cell>
+				<cell>
+					167
+				</cell>
+				<cell>
+					174
+				</cell>
+				<cell>
+					179
+				</cell>
+				<cell>
+					179
+				</cell>
+				<cell>
+					187
+				</cell>
+				<cell>
+					179
+				</cell>
+				<cell>
+					183
+				</cell>
+				<cell>
+					179
+				</cell>
+			</row>
+			<row>
+				<cell>
+					156
+				</cell>
+				<cell>
+					163
+				</cell>
+				<cell>
+					156
+				</cell>
+				<cell>
+					187
+				</cell>
+				<cell>
+					156
+				</cell>
+				<cell>
+					167
+				</cell>
+				<cell>
+					156
+				</cell>
+				<cell>
+					174
+				</cell>
+				<cell>
+					170
+				</cell>
+			</row>
+			<row>
+				<cell>
+					183
+				</cell>
+				<cell>
+					179
+				</cell>
+				<cell>
+					174
+				</cell>
+				<cell>
+					179
+				</cell>
+				<cell>
+					170
+				</cell>
+				<cell>
+					159
+				</cell>
+				<cell>
+					187
+				</cell>
+				<cell colspan="2">
+				</cell>
+			</row>
+		</tabular>
+	</table>
+	<p>
+		The engineer hypothesized that the mean Brinell hardness of all such ductile iron pieces is greater than 170. Therefore, he was interested in testing the hypotheses:
+		<md>
+			<mrow>H_0: \mu=170</mrow>
+			<mrow>H_a: \mu &gt; 170</mrow>
+		</md>
+		The engineer entered his data into R and ran the <c>t.test</c> function to obtain the following output:
+	</p>
+	<sidebyside width="90%">
+		<pre>
+			One Sample t-test
+
+			data:  Heartrates
+			t = 1.22, df = 24, p-value 0.177
+			alternative hypothesis: true mean is greater than 170
+			sample estimates:
+			mean of x 
+			 172.52
+		</pre>
+	</sidebyside>
+	<p>
+		The output tells us that the average Brinell hardness of the <m>n = 25</m> pieces of ductile iron was 172.52. The test statistic <m>t^*</m> is 1.22, and the <m>P</m>-value is 0.117.
+	</p>
+	<p>
+		If the engineer set his significance level, <m>\alpha</m> at 0.05, then he would see that the <m>P</m>-value is greater than <m>\alpha</m> and so we do not have evidence that the mean Brinell hardness of all such ductile iron pieces is greater than 170.
+	</p>
+</subsection>
+
+</section>

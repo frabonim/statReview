@@ -1,2 +1,0 @@
-warning: failed to load external entity "/Users/memjf02/books/mathbook/schema/dtd/mathbook.dtd"
-Could not parse DTD /Users/memjf02/books/mathbook/schema/dtd/mathbook.dtd

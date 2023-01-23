@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hypothesis Testing Examples</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{xbar}{\overline{x}}
+\newcommand{phat}{\hat{p}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="article-1.html"><span class="title">Elementary Statistics Review</span></a></h1>
+<p class="byline"></p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_hyptestprocedure.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="article-1.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_hyptestprocedure.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="article-1.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="front.html" data-scroll="front" class="internal"><span class="title">Front Matter</span></a></li>
+<li class="link">
+<a href="sec_basicterms.html" data-scroll="sec_basicterms" class="internal"><span class="codenumber">1</span> <span class="title">Basic Terminology</span></a><ul>
+<li><a href="sec_basicterms.html#subsection-1" data-scroll="subsection-1" class="internal">Population and Parameters</a></li>
+<li><a href="sec_basicterms.html#subsection-2" data-scroll="subsection-2" class="internal">Samples and statistics</a></li>
+<li><a href="sec_basicterms.html#subsection-3" data-scroll="subsection-3" class="internal">Next... Confidence intervals and hypothesis tests</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sec_confints.html" data-scroll="sec_confints" class="internal"><span class="codenumber">2</span> <span class="title">Confidence Intervals</span></a><ul>
+<li><a href="sec_confints.html#subsection-4" data-scroll="subsection-4" class="internal">General Form of (Most) Confidence Intervals</a></li>
+<li><a href="sec_confints.html#subsection-5" data-scroll="subsection-5" class="internal"><span class="process-math">\((1-\alpha)100\%\)</span> <span class="process-math">\(t\)</span>-interval for the population mean</a></li>
+<li><a href="sec_confints.html#subsection-6" data-scroll="subsection-6" class="internal">How is the t-multiplier determined?</a></li>
+<li><a href="sec_confints.html#subsection-7" data-scroll="subsection-7" class="internal">Using Software</a></li>
+<li><a href="sec_confints.html#subsection-8" data-scroll="subsection-8" class="internal">Factors Affecting the Width of the t-interval for the Mean <span class="process-math">\(\mu\)</span></a></li>
+<li><a href="sec_confints.html#subsection-9" data-scroll="subsection-9" class="internal">Supplemental Materials</a></li>
+<li><a href="sec_confints.html#subsection-10" data-scroll="subsection-10" class="internal">In Closing</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sec_hyptest.html" data-scroll="sec_hyptest" class="internal"><span class="codenumber">3</span> <span class="title">Hypothesis Testing</span></a><ul>
+<li><a href="sec_hyptest.html#subsection-11" data-scroll="subsection-11" class="internal">Errors in Hypothesis Testing</a></li>
+<li><a href="sec_hyptest.html#subsection-12" data-scroll="subsection-12" class="internal">Making the Decision</a></li>
+<li><a href="sec_hyptest.html#subsection-13" data-scroll="subsection-13" class="internal">In Practice</a></li>
+<li><a href="sec_hyptest.html#subsection-14" data-scroll="subsection-14" class="internal">Supplemental Materials</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sec_hyptestprocedure.html" data-scroll="sec_hyptestprocedure" class="internal"><span class="codenumber">4</span> <span class="title">Hypothesis Testing Procedure</span></a><ul>
+<li><a href="sec_hyptestprocedure.html#subsection-15" data-scroll="subsection-15" class="internal">Mean GPA</a></li>
+<li><a href="sec_hyptestprocedure.html#subsection-16" data-scroll="subsection-16" class="internal">Supplemental Materials</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="sec_hyptestexamples.html" data-scroll="sec_hyptestexamples" class="internal"><span class="codenumber">5</span> <span class="title">Hypothesis Testing Examples</span></a><ul>
+<li><a href="sec_hyptestexamples.html#subsection-17" data-scroll="subsection-17" class="internal">Right-Tailed Test</a></li>
+<li><a href="sec_hyptestexamples.html#subsection-18" data-scroll="subsection-18" class="internal">Left-Tailed Test</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_hyptestexamples"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5</span> <span class="title">Hypothesis Testing Examples</span>
+</h2>
+<section class="introduction" id="introduction-5"><p id="p-76">In this section we share two more examples of hypothesis test procedures.</p></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.1</span> <span class="title">Right-Tailed Test</span>
+</h3>
+<p id="p-77">A biologist was interested in determining whether sunflower seedlings treated with an extract from Vinca minor roots resulted in a lower average height of sunflower seedlings than the standard height of 15.7 cm. The biologist treated a random sample of <span class="process-math">\(n = 33\)</span> seedlings with the extract and subsequently obtained the following heights:</p>
+<figure class="table table-like" id="table-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.1.1<span class="period">.</span></span><span class="space"> </span>Sunflower height data</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">11.5</td>
+<td class="l m b0 r0 l0 t0 lines">11.8</td>
+<td class="l m b0 r0 l0 t0 lines">15.7</td>
+<td class="l m b0 r0 l0 t0 lines">16.1</td>
+<td class="l m b0 r0 l0 t0 lines">14.1</td>
+<td class="l m b0 r0 l0 t0 lines">10.5</td>
+<td class="l m b0 r0 l0 t0 lines">9.3</td>
+<td class="l m b0 r0 l0 t0 lines">15.0</td>
+<td class="l m b0 r0 l0 t0 lines">11.1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">15.2</td>
+<td class="l m b0 r0 l0 t0 lines">19.0</td>
+<td class="l m b0 r0 l0 t0 lines">12.8</td>
+<td class="l m b0 r0 l0 t0 lines">12.4</td>
+<td class="l m b0 r0 l0 t0 lines">19.2</td>
+<td class="l m b0 r0 l0 t0 lines">13.5</td>
+<td class="l m b0 r0 l0 t0 lines">12.2</td>
+<td class="l m b0 r0 l0 t0 lines">13.3</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">16.5</td>
+<td class="l m b0 r0 l0 t0 lines">13.5</td>
+<td class="l m b0 r0 l0 t0 lines">14.4</td>
+<td class="l m b0 r0 l0 t0 lines">16.7</td>
+<td class="l m b0 r0 l0 t0 lines">10.9</td>
+<td class="l m b0 r0 l0 t0 lines">13.0</td>
+<td class="l m b0 r0 l0 t0 lines">10.3</td>
+<td class="l m b0 r0 l0 t0 lines">15.8</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">15.1</td>
+<td class="l m b0 r0 l0 t0 lines">17.1</td>
+<td class="l m b0 r0 l0 t0 lines">13.3</td>
+<td class="l m b0 r0 l0 t0 lines">12.4</td>
+<td class="l m b0 r0 l0 t0 lines">8.5</td>
+<td class="l m b0 r0 l0 t0 lines">14.3</td>
+<td class="l m b0 r0 l0 t0 lines">12.9</td>
+<td class="l m b0 r0 l0 t0 lines">13.5</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure><p id="p-78">The biologist's hypotheses are:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
+\begin{gather*}
+H_0: \mu=15.7\\
+H_a: \mu &lt; 15.7
+\end{gather*}
+</div>
+<p class="continuation">The biologist entered her data into R and ran the <code class="code-inline tex2jax_ignore">t.test</code> function. She obtained the following output:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><pre class="code-block tex2jax_ignore">One Sample t-test
+
+data:  Heartrates
+t = -4.60, df = 32, p-value &lt; 2.2e-16
+alternative hypothesis: true mean is less than 15.7
+sample estimates:
+mean of x 
+ 13.664
+</pre></div></div></div>
+<p id="p-79">The output tells us that the average height of the <span class="process-math">\(n = 33\)</span> sunflower seedlings was 13.664. The test statistic <span class="process-math">\(t^*\)</span> is -4.60, and the <span class="process-math">\(P\)</span>-value is less than <span class="process-math">\(2.2\times 10^{-16}\text{.}\)</span></p>
+<p id="p-80">If the biologist set her significance level, <span class="process-math">\(\alpha\)</span> at 0.05, then she would see that the <span class="process-math">\(P\)</span>-value is significantly less than <span class="process-math">\(\alpha\)</span> and so she has strong evidence that the mean of all such sunflower seedlings is less than 15.7 cm.</p></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">5.2</span> <span class="title">Left-Tailed Test</span>
+</h3>
+<p id="p-81">An engineer measured the Brinell hardness of 25 pieces of ductile iron that were subcritically annealed. The resulting data were:</p>
+<figure class="table table-like" id="table-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.2.1<span class="period">.</span></span><span class="space"> </span>Brinell hardness data</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">170</td>
+<td class="l m b0 r0 l0 t0 lines">167</td>
+<td class="l m b0 r0 l0 t0 lines">174</td>
+<td class="l m b0 r0 l0 t0 lines">179</td>
+<td class="l m b0 r0 l0 t0 lines">179</td>
+<td class="l m b0 r0 l0 t0 lines">187</td>
+<td class="l m b0 r0 l0 t0 lines">179</td>
+<td class="l m b0 r0 l0 t0 lines">183</td>
+<td class="l m b0 r0 l0 t0 lines">179</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">156</td>
+<td class="l m b0 r0 l0 t0 lines">163</td>
+<td class="l m b0 r0 l0 t0 lines">156</td>
+<td class="l m b0 r0 l0 t0 lines">187</td>
+<td class="l m b0 r0 l0 t0 lines">156</td>
+<td class="l m b0 r0 l0 t0 lines">167</td>
+<td class="l m b0 r0 l0 t0 lines">156</td>
+<td class="l m b0 r0 l0 t0 lines">174</td>
+<td class="l m b0 r0 l0 t0 lines">170</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">183</td>
+<td class="l m b0 r0 l0 t0 lines">179</td>
+<td class="l m b0 r0 l0 t0 lines">174</td>
+<td class="l m b0 r0 l0 t0 lines">179</td>
+<td class="l m b0 r0 l0 t0 lines">170</td>
+<td class="l m b0 r0 l0 t0 lines">159</td>
+<td class="l m b0 r0 l0 t0 lines">187</td>
+<td class="l m b0 r0 l0 t0 lines" colspan="2"></td>
+</tr>
+</table></div></figure><p id="p-82">The engineer hypothesized that the mean Brinell hardness of all such ductile iron pieces is greater than 170. Therefore, he was interested in testing the hypotheses:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
+\begin{gather*}
+H_0: \mu=170\\
+H_a: \mu &gt; 170
+\end{gather*}
+</div>
+<p class="continuation">The engineer entered his data into R and ran the <code class="code-inline tex2jax_ignore">t.test</code> function to obtain the following output:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel top" style="width:100%;"><pre class="code-block tex2jax_ignore">One Sample t-test
+
+data:  Heartrates
+t = 1.22, df = 24, p-value 0.177
+alternative hypothesis: true mean is greater than 170
+sample estimates:
+mean of x 
+ 172.52
+</pre></div></div></div>
+<p id="p-83">The output tells us that the average Brinell hardness of the <span class="process-math">\(n = 25\)</span> pieces of ductile iron was 172.52. The test statistic <span class="process-math">\(t^*\)</span> is 1.22, and the <span class="process-math">\(P\)</span>-value is 0.117.</p>
+<p id="p-84">If the engineer set his significance level, <span class="process-math">\(\alpha\)</span> at 0.05, then he would see that the <span class="process-math">\(P\)</span>-value is greater than <span class="process-math">\(\alpha\)</span> and so we do not have evidence that the mean Brinell hardness of all such ductile iron pieces is greater than 170.</p></section></section></div></main>
+</div>
+</body>
+</html>

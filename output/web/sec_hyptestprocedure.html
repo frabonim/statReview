@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hypothesis Testing Procedure</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{xbar}{\overline{x}}
+\newcommand{phat}{\hat{p}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="article-1.html"><span class="title">Elementary Statistics Review</span></a></h1>
+<p class="byline"></p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_hyptest.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="article-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_hyptestexamples.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_hyptest.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="article-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_hyptestexamples.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="front.html" data-scroll="front" class="internal"><span class="title">Front Matter</span></a></li>
+<li class="link">
+<a href="sec_basicterms.html" data-scroll="sec_basicterms" class="internal"><span class="codenumber">1</span> <span class="title">Basic Terminology</span></a><ul>
+<li><a href="sec_basicterms.html#subsection-1" data-scroll="subsection-1" class="internal">Population and Parameters</a></li>
+<li><a href="sec_basicterms.html#subsection-2" data-scroll="subsection-2" class="internal">Samples and statistics</a></li>
+<li><a href="sec_basicterms.html#subsection-3" data-scroll="subsection-3" class="internal">Next... Confidence intervals and hypothesis tests</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sec_confints.html" data-scroll="sec_confints" class="internal"><span class="codenumber">2</span> <span class="title">Confidence Intervals</span></a><ul>
+<li><a href="sec_confints.html#subsection-4" data-scroll="subsection-4" class="internal">General Form of (Most) Confidence Intervals</a></li>
+<li><a href="sec_confints.html#subsection-5" data-scroll="subsection-5" class="internal"><span class="process-math">\((1-\alpha)100\%\)</span> <span class="process-math">\(t\)</span>-interval for the population mean</a></li>
+<li><a href="sec_confints.html#subsection-6" data-scroll="subsection-6" class="internal">How is the t-multiplier determined?</a></li>
+<li><a href="sec_confints.html#subsection-7" data-scroll="subsection-7" class="internal">Using Software</a></li>
+<li><a href="sec_confints.html#subsection-8" data-scroll="subsection-8" class="internal">Factors Affecting the Width of the t-interval for the Mean <span class="process-math">\(\mu\)</span></a></li>
+<li><a href="sec_confints.html#subsection-9" data-scroll="subsection-9" class="internal">Supplemental Materials</a></li>
+<li><a href="sec_confints.html#subsection-10" data-scroll="subsection-10" class="internal">In Closing</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sec_hyptest.html" data-scroll="sec_hyptest" class="internal"><span class="codenumber">3</span> <span class="title">Hypothesis Testing</span></a><ul>
+<li><a href="sec_hyptest.html#subsection-11" data-scroll="subsection-11" class="internal">Errors in Hypothesis Testing</a></li>
+<li><a href="sec_hyptest.html#subsection-12" data-scroll="subsection-12" class="internal">Making the Decision</a></li>
+<li><a href="sec_hyptest.html#subsection-13" data-scroll="subsection-13" class="internal">In Practice</a></li>
+<li><a href="sec_hyptest.html#subsection-14" data-scroll="subsection-14" class="internal">Supplemental Materials</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="sec_hyptestprocedure.html" data-scroll="sec_hyptestprocedure" class="internal"><span class="codenumber">4</span> <span class="title">Hypothesis Testing Procedure</span></a><ul>
+<li><a href="sec_hyptestprocedure.html#subsection-15" data-scroll="subsection-15" class="internal">Mean GPA</a></li>
+<li><a href="sec_hyptestprocedure.html#subsection-16" data-scroll="subsection-16" class="internal">Supplemental Materials</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sec_hyptestexamples.html" data-scroll="sec_hyptestexamples" class="internal"><span class="codenumber">5</span> <span class="title">Hypothesis Testing Examples</span></a><ul>
+<li><a href="sec_hyptestexamples.html#subsection-17" data-scroll="subsection-17" class="internal">Right-Tailed Test</a></li>
+<li><a href="sec_hyptestexamples.html#subsection-18" data-scroll="subsection-18" class="internal">Left-Tailed Test</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="sec_hyptestprocedure"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4</span> <span class="title">Hypothesis Testing Procedure</span>
+</h2>
+<section class="introduction" id="introduction-3"><p id="p-63">The <span class="process-math">\(P\)</span>-value approach involves determining "likely" or "unlikely" by determining the probability  assuming the null hypothesis were true  of observing a more extreme test statistic in the direction of the alternative hypothesis than the one observed. If the <span class="process-math">\(P\)</span>-value is small, say less than (or equal to) <span class="process-math">\(\alpha\text{,}\)</span> then it is "unlikely." And, if the <span class="process-math">\(P\)</span>-value is large, say more than <span class="process-math">\(\alpha\text{,}\)</span> then it is "likely."</p> <p id="p-64">If the <span class="process-math">\(P\)</span>-value is less than (or equal to) <span class="process-math">\(\alpha\text{,}\)</span> then the null hypothesis is rejected in favor of the alternative hypothesis. And, if the <span class="process-math">\(P\)</span>-value is greater than <span class="process-math">\(\alpha\text{,}\)</span> then the null hypothesis is not rejected.</p> <p id="p-65">Specifically, the four steps involved in using the <span class="process-math">\(P\)</span>-value approach to conducting any hypothesis test are:</p>
+<ol class="decimal">
+<li id="li-45"><p id="p-derived-li-45">Specify the null and alternative hypotheses.</p></li>
+<li id="li-46"><p id="p-derived-li-46">Using the sample data and assuming the null hypothesis is true, calculate the value of the test statistic. Again, to conduct the hypothesis test for the population mean <span class="process-math">\(\mu\text{,}\)</span> we use the <span class="process-math">\(t\)</span>-statistic <span class="process-math">\(t^*=\frac{\xbar-\mu}{s/\sqrt{n}}\)</span> which follows a <span class="process-math">\(t\)</span>-distribution with <span class="process-math">\(n - 1\)</span> degrees of freedom.</p></li>
+<li id="li-47"><p id="p-derived-li-47">Using the known distribution of the test statistic, calculate the <em class="emphasis"><span class="process-math">\(P\)</span>-value</em>: "If the null hypothesis is true, what is the probability that we'd observe a more extreme test statistic in the direction of the alternative hypothesis than we did?" (Note how this question is equivalent to the question answered in criminal trials: "If the defendant is innocent, what is the chance that we'd observe such extreme criminal evidence?")</p></li>
+<li id="li-48"><p id="p-derived-li-48">Set the significance level, <span class="process-math">\(\alpha\text{,}\)</span> the probability of making a Type I error to be small -- 0.01, 0.05, or 0.10. Compare the <span class="process-math">\(P\)</span>-value to <span class="process-math">\(\alpha\text{.}\)</span> If the <span class="process-math">\(P\)</span>-value is less than (or equal to) <span class="process-math">\(\alpha\text{,}\)</span> reject the null hypothesis in favor of the alternative hypothesis. If the <span class="process-math">\(P\)</span>-value is greater than <span class="process-math">\(\alpha\text{,}\)</span> do not reject the null hypothesis.</p></li>
+</ol></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1</span> <span class="title">Mean GPA</span>
+</h3>
+<section class="introduction" id="introduction-4"><p id="p-66">In our example concerning the mean grade point average, suppose that our random sample of <span class="process-math">\(n = 15\)</span> students majoring in mathematics yields a test statistic <span class="process-math">\(t^*\)</span> equaling 2.5. Since <span class="process-math">\(n = 15\text{,}\)</span> our test statistic <span class="process-math">\(t^*\)</span> has <span class="process-math">\(n - 1= 14\)</span> degrees of freedom. Also, suppose we set our significance level <span class="process-math">\(\alpha\)</span> at 0.05, so that we have only a 5% chance of making a Type I error.</p></section><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">4.1.1</span> <span class="title">Right Tailed</span>
+</h4>
+<p id="p-67">The <span class="process-math">\(P\)</span>-value for conducting the <dfn class="terminology">right-tailed</dfn> test <span class="process-math">\(H_0 : \mu = 3\)</span> versus <span class="process-math">\(H_A : \mu &gt; 3\)</span> is the probability that we would observe a test statistic greater than <span class="process-math">\(t^* = 2.5\)</span> if the population mean really were 3. Recall that probability equals the area under the probability curve. The <span class="process-math">\(P\)</span>-value is therefore the area under a <span class="process-math">\(t_{n - 1} = t_{14}\)</span> curve and to the right of the test statistic <span class="process-math">\(t^* = 2.5\text{.}\)</span> It can be shown using statistical software that the <span class="process-math">\(P\)</span>-value is 0.0127. The graph depicts this visually.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/hyparea_right.png" class="contained" alt="Area under a t distribution to the right of 2.5"></div></div></div>
+<p id="p-68">The <span class="process-math">\(P\)</span>-value, 0.0127, tells us it is "unlikely" that we would observe such an extreme test statistic <span class="process-math">\(t^*\)</span> in the direction of <span class="process-math">\(H_A\)</span> if the null hypothesis were true. Therefore, our initial assumption that the null hypothesis is true must be incorrect. That is, since the <span class="process-math">\(P\)</span>-value, 0.0127, is less than <span class="process-math">\(\alpha = 0.05\text{,}\)</span> we reject the null hypothesis <span class="process-math">\(H_0 : \mu = 3\)</span> in favor of the alternative hypothesis <span class="process-math">\(H_A : \mu &gt; 3\text{.}\)</span></p>
+<aside class="aside aside-like" id="aside-1"></aside></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">4.1.2</span> <span class="title">Left Tailed</span>
+</h4>
+<p id="p-69">In our example concerning the mean grade point average, suppose that our random sample of <span class="process-math">\(n = 15\)</span> students majoring in mathematics yields a test statistic <span class="process-math">\(t^*\)</span> instead equaling -2.5. The <span class="process-math">\(P\)</span>-value for conducting the left-tailed test <span class="process-math">\(H_0 : \mu = 3\)</span> versus <span class="process-math">\(H_A: \mu &lt; 3\)</span> is the probability that we would observe a test statistic less than <span class="process-math">\(t^* = -2.5\)</span> if the population mean <span class="process-math">\(\mu\)</span> really were 3. The <span class="process-math">\(P\)</span>-value is therefore the area under a <span class="process-math">\(t_{n - 1} = t_{14}\)</span> curve and to the <em class="emphasis">left</em> of the test statistic <span class="process-math">\(t^* = -2.5\text{.}\)</span> It can be shown using statistical software that the <span class="process-math">\(P\)</span>-value is 0.0127. The graph depicts this visually.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel top" style="width:100%;"><img src="external/hyparea_left.png" class="contained" alt="Area under a \(t\) distribution to the left of -2.5"></div></div></div>
+<p id="p-70">The <span class="process-math">\(P\)</span>-value, 0.0127, tells us it is "unlikely" that we would observe such an extreme test statistic <span class="process-math">\(t^*\)</span> in the direction of <span class="process-math">\(H_A\)</span> if the null hypothesis were true. Therefore, our initial assumption that the null hypothesis is true must be incorrect. That is, since the <span class="process-math">\(P\)</span>-value, 0.0127, is less than <span class="process-math">\(\alpha = 0.05\text{,}\)</span> we reject the null hypothesis H_0 : \mu = 3 in favor of the alternative hypothesis <span class="process-math">\(H_A : \mu &lt; 3\text{.}\)</span></p>
+<aside class="aside aside-like" id="aside-2"></aside></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">4.1.3</span> <span class="title">Two Tailed</span>
+</h4>
+<p id="p-71">In our example concerning the mean grade point average, suppose again that our random sample of <span class="process-math">\(n = 15\)</span> students majoring in mathematics yields a test statistic <span class="process-math">\(t^*\)</span> instead equaling -2.5. The <span class="process-math">\(P\)</span>-value for conducting the two-tailed test <span class="process-math">\(H_0: \mu = 3\)</span> versus <span class="process-math">\(H_A: \mu \neq 3\)</span> is the probability that we would observe a test statistic less than -2.5 or greater than 2.5 if the population mean <span class="process-math">\(\mu\)</span> really were 3. That is, the two-tailed test requires taking into account the possibility that the test statistic could fall into either tail (and hence the name "two-tailed" test). The <span class="process-math">\(P\)</span>-value is therefore the area under a <span class="process-math">\(t_{n - 1} = t_{14}\)</span> curve to the left of -2.5 and to the right of the 2.5. It can be shown using statistical software that the <span class="process-math">\(P\)</span>-value is 0.0127 + 0.0127, or 0.0254. The graph depicts this visually.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/hyparea_twotail.png" class="contained" alt="Area under a \(t\) distribution to the right of 2.5 and to the left of -2.5"></div></div></div>
+<p id="p-72">Note that the <span class="process-math">\(P\)</span>-value for a two-tailed test is always two times the <span class="process-math">\(P\)</span>-value for either of the one-tailed tests. The <span class="process-math">\(P\)</span>-value, 0.0254, tells us it is "unlikely" that we would observe such an extreme test statistic <span class="process-math">\(t^*\)</span> in the direction of <span class="process-math">\(H_A\)</span> if the null hypothesis were true. Therefore, our initial assumption that the null hypothesis is true must be incorrect. That is, since the <span class="process-math">\(P\)</span>-value, 0.0254, is less than <span class="process-math">\(\alpha = 0.05\text{,}\)</span> we reject the null hypothesis <span class="process-math">\(H_0: \mu = 3\)</span> in favor of the alternative hypothesis <span class="process-math">\(H_A: μ \neq 3\text{.}\)</span></p>
+<aside class="aside aside-like" id="aside-3"></aside></section><p id="p-73">Now that we have reviewed the <span class="process-math">\(P\)</span>-value procedures for each of three possible hypotheses, in the next section we look at three new examples  one of a right-tailed test, one of a left-tailed test, and one of a two-tailed test.</p>
+<p id="p-74">The good news is that, whenever possible, we will take advantage of the test statistics and <span class="process-math">\(P\)</span>-values reported in statistical software, such as R, to conduct our hypothesis tests in this course.</p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.2</span> <span class="title">Supplemental Materials</span>
+</h3>
+<p id="p-75">For another discussion of the <span class="process-math">\(t\)</span>-distribution, watch the following video:</p>
+<ul class="disc"><li id="li-49"><p id="p-derived-li-49"><a class="external" href="http://www.learner.org/courses/againstallodds/unitpages/unit26.html" target="_blank">Small Sample Inference for One Mean</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a>, part of `against all odds' at Annenberg Learner.</p></li></ul></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">www.learner.org/courses/againstallodds/unitpages/unit26.html</code></div></div>
+</div></main>
+</div>
+</body>
+</html>
